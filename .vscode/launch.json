@@ -1,0 +1,42 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Launch Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "Launch CaloryCount",
+            "request": "launch",
+            "mainClass": "CaloryCount",
+            "projectName": "AdventOfCode2022_5543b874"
+        },
+        {
+            "type": "java",
+            "name": "Launch Top3Elves",
+            "request": "launch",
+            "mainClass": "Top3Elves",
+            "projectName": "AdventOfCode2022_5543b874"
+        },
+        {
+            "type": "java",
+            "name": "Launch RPSScore",
+            "request": "launch",
+            "mainClass": "main.java.day2.RPSScore",
+            "projectName": "AdventOfCode2022_5543b874"
+        },
+        {
+            "type": "java",
+            "name": "Launch RPSScore2",
+            "request": "launch",
+            "mainClass": "main.java.day2.RPSScore2",
+            "projectName": "AdventOfCode2022_5543b874"
+        }
+    ]
+}
