@@ -10,7 +10,7 @@ public class CaloryCount {
                 String line;
                 Integer  maxCalorie = 0;
                 int currentCalories = 0;
-                BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day1\\Input.txt"));
+                BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day1/Input.txt"));
                 
                 while((line = reader.readLine()) != null) {
                     if(line.length() != 0){

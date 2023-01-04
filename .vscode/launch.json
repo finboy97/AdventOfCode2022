@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Rucksack",
+            "request": "launch",
+            "mainClass": "main.java.day3.Rucksack",
+            "projectName": "AdventOfCode2022_e1a209f7"
+        },
+        {
+            "type": "java",
+            "name": "Launch CaloryCount",
+            "request": "launch",
+            "mainClass": "CaloryCount",
+            "projectName": "AdventOfCode2022_e1a209f7"
+        },
+        {
+            "type": "java",
             "name": "Launch Current File",
             "request": "launch",
             "mainClass": "${file}"
