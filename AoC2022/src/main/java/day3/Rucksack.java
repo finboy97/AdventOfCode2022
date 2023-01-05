@@ -32,7 +32,6 @@ public class Rucksack {
 
                 for (int i = 0; i<pocket2.length(); i++){
                     if (pocket1Chars.contains(pocket2.charAt(i))){
-                        System.out.println(Character.toString(pocket2.charAt(i)));
                         if (duplicates.contains(pocket2.charAt(i))){
                             continue;
                         } else {
@@ -57,8 +56,7 @@ public class Rucksack {
         } catch (IOException IOerror) {
             System.out.println("IO Exception");
         }
-        System.out.println(this.repeats);
-        System.out.println(Integer.toString(score));
+    System.out.println(Integer.toString(score));
      
 }
 
