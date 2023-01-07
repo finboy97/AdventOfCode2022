@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch Assignment",
+            "request": "launch",
+            "mainClass": "main.java.day4.Assignment",
+            "projectName": "AdventOfCode2022_e1a209f7"
+        },
+        {
+            "type": "java",
             "name": "Launch Badges",
             "request": "launch",
             "mainClass": "main.java.day3.Badges",
