@@ -9,6 +9,13 @@
             "name": "Launch Assignment",
             "request": "launch",
             "mainClass": "main.java.day4.Assignment",
+            "projectName": "AdventOfCode2022_5543b874"
+        },
+        {
+            "type": "java",
+            "name": "Launch Assignment",
+            "request": "launch",
+            "mainClass": "main.java.day4.Assignment",
             "projectName": "AdventOfCode2022_e1a209f7"
         },
         {

@@ -13,16 +13,19 @@ import java.io.IOException;
 public class Assignment {
 
     Integer numberEncapsulated=0;
+    Integer numberOfOverlaps=0;
 
     public void processInput(){
         try {
             String line = new String();
-            BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day4/input.txt"));
+            //BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day4/test.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day4\\input.txt"));
             
             
 
             while((line = reader.readLine()) != null) {
-                calcluateOverlaps(line);
+                calcluateTotalEncapsulated(line);
+                calculateOverlaps(line);
 
             }
             reader.close();
@@ -32,7 +35,8 @@ public class Assignment {
         } catch (IOException IOerror) {
             System.out.println("IO Exception");
         }
-        System.out.println(Integer.toString(numberEncapsulated));
+        System.out.println("The number of pairs with an encapsulated assignment is " + Integer.toString(numberEncapsulated));
+        System.out.println("The number of pairs with a partial overlap is " + Integer.toString(numberOfOverlaps));
     }
 
     /**
@@ -41,7 +45,7 @@ public class Assignment {
      * Else, if the first value is bigger than the partners first, and the last value smaller, there is an encapsulation.
      * @param line
      */
-    public void calcluateOverlaps(String line){
+    public void calcluateTotalEncapsulated(String line){
         String[] splitPairs = line.split(",");
         int[] rangePairs = new int[4];
         rangePairs[0] = Integer.parseInt( splitPairs[0].split("-")[0]);
@@ -58,6 +62,19 @@ public class Assignment {
             numberEncapsulated++;
         }else if ((rangePairs[0]<rangePairs[2]) && (rangePairs[3]< rangePairs[1])){
             numberEncapsulated++;
+        }
+    }
+
+    public void calculateOverlaps(String str){
+        String[] splitPairs = str.split(",");
+        int[] rangePairs = new int[4];
+        rangePairs[0] = Integer.parseInt( splitPairs[0].split("-")[0]);
+        rangePairs[1] = Integer.parseInt( splitPairs[0].split("-")[1]);
+        rangePairs[2] = Integer.parseInt( splitPairs[1].split("-")[0]);
+        rangePairs[3] = Integer.parseInt( splitPairs[1].split("-")[1]);
+
+        if (!(rangePairs[1]<rangePairs[2] || rangePairs[3]<rangePairs[0])){
+            numberOfOverlaps++;
         }
     }
 
