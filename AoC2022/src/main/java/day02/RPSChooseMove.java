@@ -1,4 +1,4 @@
-package main.java.day2;
+package main.java.day02;
 
 public class RPSChooseMove {
     Character oppMove;

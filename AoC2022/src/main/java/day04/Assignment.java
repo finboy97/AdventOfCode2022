@@ -1,4 +1,4 @@
-package main.java.day4;
+package main.java.day04;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -18,8 +18,8 @@ public class Assignment {
     public void processInput(){
         try {
             String line = new String();
-            //BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day4/test.txt"));
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day4\\input.txt"));
+            //BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day04/test.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day04\\input.txt"));
             
             
 

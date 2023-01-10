@@ -1,4 +1,4 @@
-package main.java.day2;
+package main.java.day02;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileReader;

@@ -1,4 +1,4 @@
-package main.java.day3;
+package main.java.day03;
 
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
@@ -12,7 +12,9 @@ public class Rucksack1 {
     BufferedReader br;
     
     public Rucksack1() throws FileNotFoundException{
-        br = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day3\\input.txt"));
+        //br = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day3\\input.txt"));
+        br = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day03/input.txt"));
+        
     }
 
 

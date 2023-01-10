@@ -1,4 +1,4 @@
-package main.java.day2;
+package main.java.day02;
 
 /**
  * Class for calculating score for a single round of Rock Paper Scissors.
