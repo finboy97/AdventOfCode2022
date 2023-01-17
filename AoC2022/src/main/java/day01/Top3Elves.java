@@ -25,7 +25,7 @@ public class Top3Elves {
         try {
             String line;
             int currentCalories = 0;
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day1\\Input.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/java/day01/Input.txt"));
             
             while((line = reader.readLine()) != null) {
                 if(line.length() != 0){

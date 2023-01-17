@@ -21,7 +21,7 @@ public class Badges {
             String line;
             HashSet<Character> line1Chars = new HashSet<>();
             HashSet<Character> lines1and2Chars = new HashSet<>();
-            BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day3/input.txt"));
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/java/day3/input.txt"));
             
             
             int count = 0;

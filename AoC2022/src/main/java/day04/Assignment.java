@@ -18,10 +18,7 @@ public class Assignment {
     public void processInput(){
         try {
             String line = new String();
-            //BufferedReader reader = new BufferedReader(new FileReader("/home/finbar/Documents/advent_of_code_2022/AdventOfCode2022/AoC2022/src/main/java/day04/test.txt"));
-            BufferedReader reader = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day04\\input.txt"));
-            
-            
+            BufferedReader reader = new BufferedReader(new FileReader("src/main/java/day04/input.txt"));
 
             while((line = reader.readLine()) != null) {
                 calcluateTotalEncapsulated(line);

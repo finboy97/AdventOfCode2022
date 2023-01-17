@@ -14,7 +14,7 @@ public class RPSScore2 {
     Integer totalScore;
 
     public RPSScore2() throws FileNotFoundException{
-        br = new BufferedReader(new FileReader("C:\\Users\\Finba\\Documents\\AdventOfCode2022\\AdventOfCode2022\\AoC2022\\src\\main\\java\\day2\\input.txt"));
+        br = new BufferedReader(new FileReader("src/main/java/day02/input.txt"));
         line = "blah";
         totalScore = 0;
     }
