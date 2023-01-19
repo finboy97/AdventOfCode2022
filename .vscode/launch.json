@@ -9,6 +9,13 @@
             "name": "Launch SupplyStacks",
             "request": "launch",
             "mainClass": "main.java.day05.SupplyStacks",
+            "projectName": "AdventOfCode2022_5543b874"
+        },
+        {
+            "type": "java",
+            "name": "Launch SupplyStacks",
+            "request": "launch",
+            "mainClass": "main.java.day05.SupplyStacks",
             "projectName": "AdventOfCode2022_e1a209f7"
         },
         {
