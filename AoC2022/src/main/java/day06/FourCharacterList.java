@@ -1,19 +1,22 @@
 package main.java.day06;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.HashMap;
 import java.util.HashSet;
-import java.util.Objects;
 
+/**
+ * Class for processing CharacterNode objects into a linked list and identifying if the characters are all unique.
+ */
 public class FourCharacterList {
     CharacterNode first;
     CharacterNode last;
     Integer size;
     Integer lastCharacter;
 
+    /**
+     * Constructor.
+     */
     public FourCharacterList(){
         first = null;
         last = null;
@@ -21,10 +24,18 @@ public class FourCharacterList {
         lastCharacter=0;
     }
 
+    /**
+     * Method checking if the linked list is empty.
+     * @return
+     */
     public boolean isEmpty(){
-        return (Objects.equals(null, first));
+        return (first == null);
     }
 
+    /**
+     * Method checks if the Linked List is the maximum size.
+     * @return boolean.
+     */
     public boolean isFull(){
         return (size==4);
     }
@@ -53,13 +64,18 @@ public class FourCharacterList {
             first = first.getNext();
             lastCharacter++;
         }
+        
         if (this.isFull()){
             if (this.isPacketStart()){
                 System.out.println("The final character is number " + Integer.toString(lastCharacter) + ", " + Character.toString(last.getChar()));
             }
         }
+        
     }
 
+    /**
+     * Method which checks the 4 characters in the linked list, sees if there are repeats, then returns a boolean depending on the result.
+     */
     public boolean isPacketStart(){
         HashSet<Character> currentChars = new HashSet<Character>();
         CharacterNode currentNode = first;
@@ -76,6 +92,10 @@ public class FourCharacterList {
         return isStart;
     }
 
+    /**
+     * Returns the number of the final character identified in the packet start sequence.
+     * @return
+     */
     public int startNumber(){
         return lastCharacter;
     }
@@ -86,15 +106,15 @@ public class FourCharacterList {
         String line = br.readLine();
         messageInput = line;
         
-        System.out.print(messageInput.substring(0,10));
         FourCharacterList thisList = new FourCharacterList();
         for (int i=0;i<messageInput.length(); i++){
             thisList.addChar(messageInput.charAt(i));
             if (thisList.isFull()){
                 if (thisList.isPacketStart()){
                     System.out.print(Integer.toString(thisList.startNumber()));
+                    break;
+
                 }
-                break;
             }
         }
         br.close();

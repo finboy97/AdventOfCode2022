@@ -3,6 +3,7 @@ package test.java.tests;
     import org.junit.Test;
 
     import main.java.day06.FourCharacterList;
+import main.java.day06.FourteenCharacterList;
 public class Day06Test {
 
    
@@ -14,9 +15,29 @@ public class Day06Test {
         int expectedValue = 7;
         for (int i=0;i<testInput.length(); i++){
             testList.addChar(testInput.charAt(i));
-            if (testList.isPacketStart()){
-                packetStartNo = testList.startNumber();
-                break;
+            if (testList.isFull()){
+                if (testList.isPacketStart()){
+                    packetStartNo = testList.startNumber();
+                    break;
+                }
+            }
+        }
+        assertEquals(expectedValue, packetStartNo);
+    }
+
+    @Test
+    public void fourteenCharacterReturnsCorrectStartPosition() throws AssertionError{
+        FourteenCharacterList testList = new FourteenCharacterList();
+        String testInput = "bvwbjplbgvbhsrlpgdmjqwftvncz";
+        int packetStartNo = 0;
+        int expectedValue = 23;
+        for (int i=0; i<testInput.length();i++){
+            testList.addChar(testInput.charAt(i));
+            if (testList.isFull()){
+                if (testList.isPacketStart()){
+                    packetStartNo=testList.startNumber();
+                    break;
+                }
             }
         }
         assertEquals(expectedValue, packetStartNo);
