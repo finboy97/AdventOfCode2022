@@ -8,30 +8,48 @@ import java.util.regex.Pattern;
 import java.util.regex.Matcher;
 
 public class ReadTerminalInteractions {
-    
+    Integer totalSizeOfDirectoriesSmallerThan100k;
 
-    public void readInput() throws IOException{
-        BufferedReader br = new BufferedReader(new FileReader("src/main/java/day07/Input.txt"));
+    public ReadTerminalInteractions(){
+        totalSizeOfDirectoriesSmallerThan100k = 0;
+    }
+
+    public void readInput(String path) throws IOException{
+        BufferedReader br = new BufferedReader(new FileReader(path));
         String line = new String();
 
         while ((line = br.readLine())!=null){
             manageLine(line);
         }
+        br.close();
     }
 
     private void manageLine(String input){
-        String elementOne = input.split(" ")[0];
-        
-        Pattern pattern = Pattern.compile("[0-9]{1,}");
-        Matcher mt = pattern.matcher(elementOne);
+        String[] lineInputArray = input.split(" ");
+        Pattern pattern1 = Pattern.compile("[0-9]{1,}");
+        Matcher mt = pattern1.matcher(lineInputArray[0]);
+
         if (mt.matches()){
-            elementOne="int";
+            lineInputArray[0]="int";
         }
 
-        switch(elementOne){
+        switch(lineInputArray[0]){
             case "$":
-                System.out.println("Command");
-                break;
+                if (lineInputArray[1].equals("cd")){
+                    if (lineInputArray[2].equals("..")){
+                        System.out.println("Move up 1 level");
+                        break;
+                    }else{
+                        System.out.println("Move down 1 level");
+                        break;
+                    }
+                } else if (lineInputArray[1].equals("ls")){
+                    System.out.println("List elements");
+                    break;
+                } else {
+                    System.out.println("Command not found");
+                    break;
+                }          
             case "dir":
                 System.out.println("Directory");
                 break;
@@ -44,8 +62,12 @@ public class ReadTerminalInteractions {
         }
     }
 
+    public int returnFilesLessThan100k(){
+        return totalSizeOfDirectoriesSmallerThan100k;
+    }
+
     public static void main (String[] args) throws IOException{
         ReadTerminalInteractions test = new ReadTerminalInteractions();
-        test.readInput();
+        test.readInput("src/main/java/day07/Input.txt");
     }
 }
